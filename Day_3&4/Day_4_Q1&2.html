@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4_Q1</title>
+    <style>
+        span {
+            color:lightseagreen;
+        }
+        img {
+            border: 2px solid lightseagreen;
+        }
+        .inp_Field{
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 2px dotted lightseagreen;
+            outline: none;
+        }
+        .img_Btns{
+            margin: auto 120px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Question 1 <span>:</span></h2>
+    <div>
+        <img src="http://sfwallpaper.com/images/cool-space-wallpaper-1.jpg" alt="Reload" 
+        width="400px"
+        id="image" >
+    </div>
+    <div class="img_Btns">
+        <button onclick="change_Image0()">First</button>
+        <button onclick="change_Image1()">Second</button>
+        <button onclick="change_Image2()">Third</button>
+    </div>
+
+    <h2>Question 2 <span>:</span></h2>
+    <div>
+        <label for="">Enter Text : </label>
+        <input type="text" class="inp_Field" value =""> <br>
+        <label for="">Copy Text : </label>
+        <input type="text" class="inp_Field" placeholder="Copied Text" value=""> <br> 
+        <button onclick="copyValue()">Click to copy</button> <br>
+    </div>
+    <script>
+        //Question 1:
+        function change_Image0(){
+            const pic0 = document.getElementById("image");
+            pic0.src = "http://sfwallpaper.com/images/cool-space-wallpaper-1.jpg";
+        }
+        function change_Image1(){
+            const pic1 = document.getElementById("image");
+            img1 = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg";
+            pic1.src = img1;
+        }
+        function change_Image2(){
+            const pic2 = document.getElementById("image");
+            pic2.src = "http://sfwallpaper.com/images/cool-space-wallpaper-3.jpg";
+        }
+
+        //Question 2:
+        function copyValue(){
+            const text = document.getElementsByClassName("inp_Field");
+            text[1].value = text[0].value
+        }
+
+    </script>
+</body>
+</html>
