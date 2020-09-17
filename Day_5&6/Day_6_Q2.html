@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_6_Q2</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px; 
+        }
+        .data {
+            width: 80%;
+            height: 600px;
+            padding: 20px;
+            background-color: rgb(100, 223, 223);
+            margin-left: 8%;
+            margin-top: 50px;
+            padding: 20px
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        th,td {
+            height: 30px;
+            text-align: center;
+            padding: 5px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input {
+            height: 30px;
+            text-indent: 20px;
+        }
+        button {
+            padding: 5px;
+            background-color: rgb(235, 45, 45);
+            border-radius: 8px;
+        }
+        .add {
+            padding: 5px;
+            background-color: rgb(42, 179, 53);
+            border-radius: 8px;
+        }
+        .search {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>  
+    <!-- Create a blank array and later on create a add bus functionality bus object contains {name, source, 
+    destination, number, passenger capacity}
+
+    A. A form to add new bus 
+    B. Display data in table format 
+    C. Search by source and destination 
+    D. Data should be stored permanently in localstorage  -->
+    
+    <div class="data">
+        <h1>Bus Data</h1>
+        <div class="form">
+            <form onsubmit="addBus(event)">
+                <input type="text" placeholder="Name" id="name" required/>
+                <input type="text" placeholder="Source" id="source" required/>
+                <input type="text" placeholder="Destination" id="destination" required/>
+                <input type="number" placeholder="Number" id="number"required/>
+                <input type="number" placeholder="Capacity" id="capacity" required/>
+                <button type="submit" class="add">Add</button>
+            </form>
+        </div>
+        
+        <div class="search">
+            <label>
+                From: 
+                <input type="text" placeholder="Source" id="search_Src" onkeyup="searchBySrc()" />
+            </label>
+            <label>
+                To: 
+                <input type="text" placeholder="Destination" id="search_Des" onkeyup="searchByDes()" />
+            </label>
+        </div>
+
+        <table border="1px" cellspacing="0">
+            <thead>
+                <th>Sr no.</th>
+                <th>Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Number</th>
+                <th>Capacity</th>
+                <th>Action</th>
+            </thead>
+            <tbody class="tdata"></tbody>
+        </table>
+    </div>
+
+    
+    <script src="Day_6_Q2.js"></script>
+</body>
+</html>

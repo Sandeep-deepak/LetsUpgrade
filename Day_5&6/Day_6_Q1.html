@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_6_Q1</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .data {
+            width: 80%;
+            height: 440px;
+            padding: 20px;
+            background-color: rgb(100, 223, 223);
+            margin-left: 8%;
+            margin-top: 50px;
+            padding: 20px    
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        th,td {
+            height: 40px;
+            text-align: center;
+            padding: 5px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input {
+            height: 40px;
+            text-indent: 20px;
+        }
+        button {
+            padding: 5px;
+            background-color: rgb(235, 45, 45);
+            border-radius: 8px;
+        }
+        .search {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="data">
+        <h1>Empolyee's</h1>
+        <!-- Create a  array containing five objects with properties { name, age , city , salary } 
+        A. Display all the objects in a table 
+        B. Create a search functionality for name and city 
+        C. Delete button to delete records 
+        D. Data is not permanent  -->
+
+        <div class="search">
+            <label>Search by Name & City: 
+                <input type="text" 
+            placeholder="Search here" 
+            onkeyup="searchByName_City()"
+            id = "searchName" /></label>
+        </div>
+
+        <table border = 1px cellspacing="0">
+            <thead>
+                <tr>
+                <th>Sr no</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Salary</th>
+                <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="tdata"></tbody>
+        </table>
+    </div>
+    
+
+    <script src="Day_6_Q1.js"></script>
+</body>
+</html>
